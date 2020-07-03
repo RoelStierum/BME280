@@ -23,3 +23,6 @@ For using this project you will definitely need the hwlib, provided by user wovo
 
 ## Wiring
 The bme280 chip should be connected as the diagram provided in this repository (filename: wiring_diagram).
+
+## Comments about this project
+User wovo commented about this project, the only optional changes on this project could be: making enum classes for the registers located in bme280.hpp (line 15 to 62), and changing some of the names of the registors.
