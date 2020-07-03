@@ -19,7 +19,7 @@ The two most important files of the library are 'bme280.hpp' and 'bme280.cpp'.
 There is a main file. This is made to demonstrate the functions of this library on a small monochrome oled display.
 
 ## Needed libraries
-For using this project you will definitely need the hwlib, provided by user wovo (Wouter Van Ooijen https://github.com/wovo.) I have used the bmptk library also kindly provided by user wovo, i have used the library as a minimalist make-based development environment for programming small micro-controllers using GCC, C, C++. 
+For using this project you will definitely need the hwlib library, provided by user wovo (Wouter Van Ooijen https://github.com/wovo.) I have used the bmptk library also kindly provided by user wovo, i have used the library as a minimalist make-based development environment for programming small micro-controllers using GCC, C, C++. 
 
 ## Wiring
 The bme280 chip should be connected as the diagram provided in this repository (filename: wiring_diagram).
