@@ -22,11 +22,4 @@ There is a main file. This is made to demonstrate the functions of this library 
 For using this project you will definitely need the hwlib, provided by user wovo (Wouter Van Ooijen https://github.com/wovo.) I have used the bmptk library also kindly provided by user wovo, i have used the library as a minimalist make-based development environment for programming small micro-controllers using GCC, C, C++. 
 
 ## Wiring
-The bme280 chip should be connected as the following diagram explains to use it.
-
-chip  -   Arduino
-
-vcc   =   3v
-gnd   =   ground
-scl   =   scl
-sda   =   sda
+The bme280 chip should be connected as the diagram provided in this repository (filename: wiring_diagram).
