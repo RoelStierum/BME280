@@ -1,0 +1,207 @@
+\hypertarget{classbme280}{}\section{bme280 Class Reference}
+\label{classbme280}\index{bme280@{bme280}}
+
+
+This class provides the usage of the \hyperlink{classbme280}{bme280} in 3 modes (S\+L\+E\+EP, F\+O\+R\+C\+ED, S\+T\+A\+N\+D\+BY).  
+
+
+
+
+{\ttfamily \#include $<$bme280.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbme280_a03080355d94cce45ee931426c8d19a08}{bme280} (hwlib\+::i2c\+\_\+bus \&i2c\+\_\+bus, uint8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{classbme280}{bme280}. Requires a i2c bus to use for communication with the \hyperlink{classbme280}{bme280} and the i2c address, (usually 0x76 $\vert$ 0x77) of the \hyperlink{classbme280}{bme280}. Default values that are set for the \hyperlink{classbme280}{bme280} are normal mode and oversampling x2. This constructor does not perform any read or write operations with the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+void \hyperlink{classbme280_a8f96a694ae42a08e82b8e585cc9c091e}{configure} ()
+\begin{DoxyCompactList}\small\item\em Configures the \hyperlink{classbme280}{bme280} by retrieving required data from the \hyperlink{classbme280}{bme280} and setting register values. Performs read and write operations to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+float \hyperlink{classbme280_a6b62bc13a120c4764d8655a2a4213282}{get\+Temperature} ()
+\begin{DoxyCompactList}\small\item\em Get the temperature in degrees celcius . Performs a read operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classbme280_a378fe9af89027338551cbef4361afec4}{get\+Pressure} ()
+\begin{DoxyCompactList}\small\item\em Get the pressure in pA. Performs a read operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+float \hyperlink{classbme280_ae73c3de91865386f94765e890aa5a5de}{get\+Altitude} (double sea\+\_\+level\+\_\+pressure=1013.\+15)
+\begin{DoxyCompactList}\small\item\em Helper method that gets the altitude based on the temperature and pressure. The return value is expressed in meters. Performs write operations to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbme280_a81c999b8c2d4d1d6ed325019c7487da8}\label{classbme280_a81c999b8c2d4d1d6ed325019c7487da8}} 
+void \hyperlink{classbme280_a81c999b8c2d4d1d6ed325019c7487da8}{reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the \hyperlink{classbme280}{bme280} to factory default. Performs a write operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+bool \hyperlink{classbme280_a784c01efad1458fac6dc4f6940b4b3ff}{set\+Oversampling} (\hyperlink{bme280_8hpp_a8eb2f33991b63046b2887939a003837f}{O\+V\+E\+R\+S\+A\+M\+P\+L\+I\+NG} os)
+\begin{DoxyCompactList}\small\item\em Sets the oversampling for obtaining measurements, Default is 2. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+bool \hyperlink{classbme280_af0fc48370bf9144f610f84d548f6ee07}{set\+Mode} (\hyperlink{bme280_8hpp_a4fa86f9d2218a1052a2f337ec17984d3}{M\+O\+DE} m)
+\begin{DoxyCompactList}\small\item\em Mode that the \hyperlink{classbme280}{bme280} should operate in. Default is normal mode. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+bool \hyperlink{classbme280_a4fb6f417fb29b6c5a30519e2599ff489}{set\+I\+IR} (\hyperlink{bme280_8hpp_a67b0684f2b007e72879b3ec3928a4a40}{I\+I\+R\+\_\+\+R\+ES} res)
+\begin{DoxyCompactList}\small\item\em Sets the filtering coefficient for pressure. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+bool \hyperlink{classbme280_ab88f4e002affd59867caeb4037944140}{set\+Standby\+Time} (\hyperlink{bme280_8hpp_a2db4a9862b3a2e31301ac185385d2520}{S\+T\+A\+N\+D\+B\+Y\+\_\+\+T\+I\+ME} standby\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Set the standby time beween measurements when in normal mode. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classbme280_a486ed59e9eea42e0375628c67e2ed66b}{get\+Device\+Id} ()
+\begin{DoxyCompactList}\small\item\em Gets the device id that has been found for the bme. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classbme280_a61798b4e47639700c577e512d990a60a}{get\+Errors} ()
+\begin{DoxyCompactList}\small\item\em Returns uint8\+\_\+t that can contain error types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides the usage of the \hyperlink{classbme280}{bme280} in 3 modes (S\+L\+E\+EP, F\+O\+R\+C\+ED, S\+T\+A\+N\+D\+BY). 
+
+\begin{DoxyAuthor}{Author}
+Roel Stierum 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbme280_a03080355d94cce45ee931426c8d19a08}\label{classbme280_a03080355d94cce45ee931426c8d19a08}} 
+\index{bme280@{bme280}!bme280@{bme280}}
+\index{bme280@{bme280}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{bme280()}{bme280()}}
+{\footnotesize\ttfamily bme280\+::bme280 (\begin{DoxyParamCaption}\item[{hwlib\+::i2c\+\_\+bus \&}]{i2c\+\_\+bus,  }\item[{uint8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Constructor of \hyperlink{classbme280}{bme280}. Requires a i2c bus to use for communication with the \hyperlink{classbme280}{bme280} and the i2c address, (usually 0x76 $\vert$ 0x77) of the \hyperlink{classbme280}{bme280}. Default values that are set for the \hyperlink{classbme280}{bme280} are normal mode and oversampling x2. This constructor does not perform any read or write operations with the \hyperlink{classbme280}{bme280}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em hwlib\+::i2c\+\_\+bus\&} & i2c\+\_\+bus The hwlib i2c bus to use. \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & Address The i2c address for the \hyperlink{classbme280}{bme280}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbme280_a8f96a694ae42a08e82b8e585cc9c091e}\label{classbme280_a8f96a694ae42a08e82b8e585cc9c091e}} 
+\index{bme280@{bme280}!configure@{configure}}
+\index{configure@{configure}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void bme280\+::configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configures the \hyperlink{classbme280}{bme280} by retrieving required data from the \hyperlink{classbme280}{bme280} and setting register values. Performs read and write operations to the \hyperlink{classbme280}{bme280}. 
+
+\begin{DoxyWarning}{Warning}
+Retrieving temperature and pressure before calling this method will result in undefined behaviour (wrong measurements). 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classbme280_ae73c3de91865386f94765e890aa5a5de}\label{classbme280_ae73c3de91865386f94765e890aa5a5de}} 
+\index{bme280@{bme280}!get\+Altitude@{get\+Altitude}}
+\index{get\+Altitude@{get\+Altitude}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{get\+Altitude()}{getAltitude()}}
+{\footnotesize\ttfamily float bme280\+::get\+Altitude (\begin{DoxyParamCaption}\item[{double}]{sea\+\_\+level\+\_\+pressure = {\ttfamily 1013.15} }\end{DoxyParamCaption})}
+
+
+
+Helper method that gets the altitude based on the temperature and pressure. The return value is expressed in meters. Performs write operations to the \hyperlink{classbme280}{bme280}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sea\+\_\+level\+\_\+pressure} & The local pressure at sea level, expressed in hectopascal (h\+Pa).\\
+\hline
+\end{DoxyParams}
+returns float Altitude in meters. \mbox{\Hypertarget{classbme280_a486ed59e9eea42e0375628c67e2ed66b}\label{classbme280_a486ed59e9eea42e0375628c67e2ed66b}} 
+\index{bme280@{bme280}!get\+Device\+Id@{get\+Device\+Id}}
+\index{get\+Device\+Id@{get\+Device\+Id}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{get\+Device\+Id()}{getDeviceId()}}
+{\footnotesize\ttfamily uint8\+\_\+t bme280\+::get\+Device\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the device id that has been found for the bme. 
+
+uint8\+\_\+t The device id (not i2c address!) for the \hyperlink{classbme280}{bme280} at address 0x\+D0. \mbox{\Hypertarget{classbme280_a61798b4e47639700c577e512d990a60a}\label{classbme280_a61798b4e47639700c577e512d990a60a}} 
+\index{bme280@{bme280}!get\+Errors@{get\+Errors}}
+\index{get\+Errors@{get\+Errors}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{get\+Errors()}{getErrors()}}
+{\footnotesize\ttfamily uint8\+\_\+t bme280\+::get\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns uint8\+\_\+t that can contain error types. 
+
+uint8\+\_\+t Error types of error that have been found. \mbox{\Hypertarget{classbme280_a378fe9af89027338551cbef4361afec4}\label{classbme280_a378fe9af89027338551cbef4361afec4}} 
+\index{bme280@{bme280}!get\+Pressure@{get\+Pressure}}
+\index{get\+Pressure@{get\+Pressure}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{get\+Pressure()}{getPressure()}}
+{\footnotesize\ttfamily uint32\+\_\+t bme280\+::get\+Pressure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the pressure in pA. Performs a read operation to the \hyperlink{classbme280}{bme280}. 
+
+returns uint32\+\_\+t Pressure in unit of pA. \mbox{\Hypertarget{classbme280_a6b62bc13a120c4764d8655a2a4213282}\label{classbme280_a6b62bc13a120c4764d8655a2a4213282}} 
+\index{bme280@{bme280}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{get\+Temperature()}{getTemperature()}}
+{\footnotesize\ttfamily float bme280\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the temperature in degrees celcius . Performs a read operation to the \hyperlink{classbme280}{bme280}. 
+
+returns float Degrees celcius of measured temperature. \mbox{\Hypertarget{classbme280_a4fb6f417fb29b6c5a30519e2599ff489}\label{classbme280_a4fb6f417fb29b6c5a30519e2599ff489}} 
+\index{bme280@{bme280}!set\+I\+IR@{set\+I\+IR}}
+\index{set\+I\+IR@{set\+I\+IR}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{set\+I\+I\+R()}{setIIR()}}
+{\footnotesize\ttfamily bool bme280\+::set\+I\+IR (\begin{DoxyParamCaption}\item[{\hyperlink{bme280_8hpp_a67b0684f2b007e72879b3ec3928a4a40}{I\+I\+R\+\_\+\+R\+ES}}]{res }\end{DoxyParamCaption})}
+
+
+
+Sets the filtering coefficient for pressure. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em I\+I\+R\+\_\+\+R\+ES} & resolution of the filter.\\
+\hline
+\end{DoxyParams}
+bool Returns true when value has been set succesfully and false if failed. \mbox{\Hypertarget{classbme280_af0fc48370bf9144f610f84d548f6ee07}\label{classbme280_af0fc48370bf9144f610f84d548f6ee07}} 
+\index{bme280@{bme280}!set\+Mode@{set\+Mode}}
+\index{set\+Mode@{set\+Mode}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{set\+Mode()}{setMode()}}
+{\footnotesize\ttfamily bool bme280\+::set\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{bme280_8hpp_a4fa86f9d2218a1052a2f337ec17984d3}{M\+O\+DE}}]{m }\end{DoxyParamCaption})}
+
+
+
+Mode that the \hyperlink{classbme280}{bme280} should operate in. Default is normal mode. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em M\+O\+DE} & Mode that the \hyperlink{classbme280}{bme280} should operate in.\\
+\hline
+\end{DoxyParams}
+bool Returns true when value has been set succesfully and false if failed. \mbox{\Hypertarget{classbme280_a784c01efad1458fac6dc4f6940b4b3ff}\label{classbme280_a784c01efad1458fac6dc4f6940b4b3ff}} 
+\index{bme280@{bme280}!set\+Oversampling@{set\+Oversampling}}
+\index{set\+Oversampling@{set\+Oversampling}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{set\+Oversampling()}{setOversampling()}}
+{\footnotesize\ttfamily bool bme280\+::set\+Oversampling (\begin{DoxyParamCaption}\item[{\hyperlink{bme280_8hpp_a8eb2f33991b63046b2887939a003837f}{O\+V\+E\+R\+S\+A\+M\+P\+L\+I\+NG}}]{os }\end{DoxyParamCaption})}
+
+
+
+Sets the oversampling for obtaining measurements, Default is 2. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em O\+V\+E\+R\+S\+A\+M\+P\+L\+I\+NG} & The oversampling to use.\\
+\hline
+\end{DoxyParams}
+bool Returns true when value has been set succesfully and false if failed. \mbox{\Hypertarget{classbme280_ab88f4e002affd59867caeb4037944140}\label{classbme280_ab88f4e002affd59867caeb4037944140}} 
+\index{bme280@{bme280}!set\+Standby\+Time@{set\+Standby\+Time}}
+\index{set\+Standby\+Time@{set\+Standby\+Time}!bme280@{bme280}}
+\subsubsection{\texorpdfstring{set\+Standby\+Time()}{setStandbyTime()}}
+{\footnotesize\ttfamily bool bme280\+::set\+Standby\+Time (\begin{DoxyParamCaption}\item[{\hyperlink{bme280_8hpp_a2db4a9862b3a2e31301ac185385d2520}{S\+T\+A\+N\+D\+B\+Y\+\_\+\+T\+I\+ME}}]{standby\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Set the standby time beween measurements when in normal mode. Performs a read and write operation to the \hyperlink{classbme280}{bme280}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em S\+T\+A\+N\+D\+B\+Y\+\_\+\+T\+I\+ME} & standby time enum for standby time between measurements.\\
+\hline
+\end{DoxyParams}
+bool Returns true when value has been set succesfully and false if failed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bme280_8hpp}{bme280.\+hpp}\item 
+bme280.\+cpp\end{DoxyCompactItemize}
