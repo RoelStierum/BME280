@@ -22,7 +22,7 @@ There is a main file. This is made to demonstrate the functions of this library 
 For using this project you will definitely need the hwlib library, provided by user wovo (Wouter Van Ooijen https://github.com/wovo.) I have used the bmptk library also kindly provided by user wovo, i have used the library as a minimalist make-based development environment for programming small micro-controllers using GCC, C, C++. 
 
 ## Wiring
-The bme280 chip should be connected as the diagram provided in this repository (filename: wiring_diagram).
+The bme280 chip should be connected as shown in the diagram provided in this repository (filename: wiring_diagram).
 
 ## Comments about this project
 User wovo commented about this project, the only optional changes on this project could be: making enum classes for the registers located in bme280.hpp (line 15 to 62), and changing some of the names of the registors.
